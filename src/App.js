@@ -5,6 +5,7 @@ import MenuBar from "./components/MenuBar";
 import Home from "./components/Home";
 import AllProjects from "./components/AllProjects";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/all_projects" element={<AllProjects />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

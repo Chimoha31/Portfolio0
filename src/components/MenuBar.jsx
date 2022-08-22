@@ -29,11 +29,11 @@ const MenuBar = () => {
                 Works
               </Link>
             </li>
-            <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }}>
-              <a href="/contact" className="nav-link">
+            <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }} onClick={handleClose}>
+              <Link to="/contact" className="nav-link">
                 <i className="fas fa-mail-bulk mx-3"></i>
                 Contact
-              </a>
+              </Link>
             </li>
             <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }} onClick={handleClose}>
               <a href="Resume.pdf" className="nav-link" download="Resume">
