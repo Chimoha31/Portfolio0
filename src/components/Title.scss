@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:wght@500&display=swap");
+
+.introduce_container {
+  font-family: "Acme", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  & .introduce {
+    & h2 {
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+    & h1 {
+      font-size: 2.5rem;
+    }
+
+    & p {
+      width: 300px;
+      font-size: 1.2rem;
+      padding: 8px 0px;
+      font-weight: 300;
+      background-color: rgb(58, 240, 155);
+      border-radius: 10px 30px 20px 40px;
+    }
+    & .contact_btn {
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    & .contact_btn {
+      position: relative;
+      font-family: "Courier New", Courier, monospace;
+      color: #333;
+      border: 1px solid #ccc;
+      padding: 10px 30px;
+      display: inline-block;
+      text-decoration: none;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: rgba(37, 233, 174, 0.897);
+        color: #000;
+        border-color: transparent;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        border: solid rgb(218, 3, 218);
+        width: 10px;
+        height: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+      &::before {
+        top: -6px;
+        left: -6px;
+        border-width: 1px 0 0 1px;
+      }
+      &::after {
+        bottom: -6px;
+        right: -6px;
+        border-width: 0 1px 1px 0;
+      }
+      &:hover::before,
+      &:hover::after {
+        width: calc(100% + 11px);
+        height: calc(100% + 11px);
+        border-color: rgb(191, 15, 214);
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .introduce_container {
+    margin-top: 100px;
+    & .introduce {
+      & h2 {
+        font-size: 3.5rem;
+      }
+      & h1 {
+        font-size: 4.6rem;
+      }
+      & p {
+        width: 600px;
+        font-size: 1.5rem;
+      }
+      & .contact_btn {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .introduce_container {
+      & .introduce {
+        & h2 {
+          font-size: 4.6rem;
+        }
+        & h1 {
+          font-size: 5.5rem;
+        }
+        & p {
+          width: 700px;
+          font-size: 1.6rem;
+        }
+        & .contact_btn {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
