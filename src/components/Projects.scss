@@ -1,0 +1,74 @@
+.first_carousel {
+  & .card {
+    & .button {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      & .github,
+      & .app {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-family: "Titan One", cursive;
+        border-radius: 5px;
+        padding: 5px 0;
+      }
+      & .github {
+        background-color: rgb(14, 150, 150);
+        color: #fff;
+      }
+      & .app {
+        border: 1px solid #ccc;
+        color: rgb(9, 145, 145);
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .github,
+  .app {
+    font-size: 18px;
+  }
+}
+
+.first_carousel {
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & .card {
+    height: auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 0 0 10px 10px;
+    border: none;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .first_carousel {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    & .card {
+      width: 350px;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .first_carousel,
+  .second_carousel {
+    & .card {
+      width: 380px;
+      margin: 0 1rem;
+    }
+  }
+}
