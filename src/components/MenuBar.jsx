@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import { AiOutlineMenu } from "react-icons/ai";
+import './MenuBar.scss';
 
 const MenuBar = () => {
   const [show, setShow] = useState(false);
@@ -9,7 +10,7 @@ const MenuBar = () => {
 
   return (
     <>
-      <AiOutlineMenu onClick={handleShow} className="mx-3 my-3" style={{ fontSize: "1.3rem" }} />
+      <AiOutlineMenu onClick={handleShow} className="mx-3 my-3 menu_icon" style={{ fontSize: "1.3rem" }} />
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton></Offcanvas.Header>

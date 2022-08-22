@@ -1,0 +1,9 @@
+.header_container {
+  display: none;
+}
+
+@media (min-width: "767px") {
+  .header_container {
+    display: block;
+  }
+}
