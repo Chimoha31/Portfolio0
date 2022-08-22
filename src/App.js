@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutMe from './components/AboutMe';
 import Header from './components/Header';
 import MenuBar from './components/MenuBar';
 import Projects from './components/Projects';
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <Title />
       <Projects />
+      <AboutMe />
     </div>
   )
 }

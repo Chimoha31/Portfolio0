@@ -4,7 +4,7 @@ import "./Title.scss";
 const Title = () => {
   return (
     <>
-      <div className="introduce_container mt-5 mb-5">
+      <div className="introduce_container mb-5" style={{marginTop: "6rem"}}>
         <div className="introduce d-flex flex-column justify-content-center align-items-center">
           <h2>Hi, I am</h2>
           <h1>Chiho Maekawa</h1>
