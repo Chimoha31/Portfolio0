@@ -1,27 +1,35 @@
-import recipe_app from "../projectsImage/recipe_app.png";
-import rock_paper_scissors from "../projectsImage/rock_paper_scissors.png";
+import qrcode_generator from "../projectsImage/qrcode_generator.png";
+import mern from "../projectsImage/mern.png";
 
 let projectElements03 = [
   {
-    id: 5,
-    image: recipe_app,
-    title: "Ezy Pzy Recipe",
-    description:
-      "This is a foods recipe application by using API for who want to know the ingredients for meals or how to make.",
-    technology: ["css", "jquery", "react", "materialui", "netlify"],
-    github: "https://github.com/Chimoha31/Recipe.git",
-    app: "https://ezypzy-recipe.netlify.app",
+    id: 7,
+    image: qrcode_generator,
+    title: "QrCode Generator",
+    description: "This is an application to generate QrCode.",
+    technology: ["tailwind", "css", "react", "vercel"],
+    github: "https://github.com/Chimoha31/QrCode_Generator.git",
+    app: "https://qrcode-generator-forfree.vercel.app/",
   },
   {
-    id: 6,
-    image: rock_paper_scissors,
-    title: "Rock Paper Scissors",
+    id: 8,
+    image: mern,
+    title: "CRUD - Students Management List ",
     description:
-      "This is a game App for fun, ROCK PAPER SCISSORS. 5 points match.",
-    technology: ["sass", "react", "vercel"],
-    github: "https://github.com/Chimoha31/Rock_Paper_Scissors.git",
-    app: "https://rock-paper-scissors-fungame.vercel.app/",
+      "This is an application for managing students information for school.",
+    technology: [
+      "tailwind",
+      "react",
+      "nodejs",
+      "express",
+      "mongoDB",
+      "firebase",
+      "heroku",
+    ],
+    github: "https://github.com/Chimoha31/MERN-for-deploy.git",
+    app: "https://students-management-list.herokuapp.com/",
   },
+
   // {
   //   id: 7,
   //   image: qrcode_generator,

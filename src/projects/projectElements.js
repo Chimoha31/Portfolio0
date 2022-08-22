@@ -1,13 +1,14 @@
 import cutory from "../projectsImage/CUTORY.png";
 import portfolio_chiho from "../projectsImage/portfolio_chiho.png";
+import hotel_booking from "../projectsImage/hotel_booking.png";
 
 let projectElements = [
   {
     id: 1,
     image: portfolio_chiho,
-    title: "Portfolio",
+    title: "Portfolio - Chiho Maekawa -",
     description: "This is my portfolio.",
-    technology: ["react", "jquery", "emailjs", "material-icons", "vercel"],
+    technology: ["react", "bootstrap", "emailjs", "vercel"],
     github: "https://github.com/Chimoha31/Portfolio.git",
     app: "https://portfolio-chiho.vercel.app/",
   },
@@ -20,53 +21,15 @@ let projectElements = [
     github: "https://github.com/Chimoha31/cutory",
     app: "https://cutory-client.herokuapp.com/",
   },
-  // {
-  //   id: 5,
-  //   image: recipe_app,
-  //   title: "Ezy Pzy Recipe",
-  //   description:
-  //     "This is a foods recipe application by using API for who want to know the ingredients for meals or how to make.",
-  //   technology: ["css", "jquery", "react", "materialui", "netlify"],
-  //   github: "https://github.com/Chimoha31/Recipe.git",
-  //   app: "https://ezypzy-recipe.netlify.app",
-  // },
-  // {
-  //   id: 6,
-  //   image: rock_paper_scissors,
-  //   title: "Rock Paper Scissors",
-  //   description:
-  //     "This is a game App for fun, ROCK PAPER SCISSORS. 5 points match.",
-  //   technology: ["sass", "react", "vercel"],
-  //   github: "https://github.com/Chimoha31/Rock_Paper_Scissors.git",
-  //   app: "https://rock-paper-scissors-fungame.vercel.app/",
-  // },
-  // {
-  //   id: 7,
-  //   image: qrcode_generator,
-  //   title: "QrCode Generator",
-  //   description: "This is a QrCode Generator App.",
-  //   technology: ["tailwind", "css", "react", "vercel"],
-  //   github: "https://github.com/Chimoha31/QrCode_Generator.git",
-  //   app: "https://qrcode-generator-forfree.vercel.app/",
-  // },
-  // {
-  //   id: 8,
-  //   image: mern,
-  //   title: "CRUD - Students Management List ",
-  //   description:
-  //     "It is an application for managing students personal information for school. Also, I implemented login and sign in by using firebase",
-  //   technology: [
-  //     "tailwind",
-  //     "react",
-  //     "nodejs",
-  //     "express",
-  //     "mongoDB",
-  //     "firebase",
-  //     "heroku",
-  //   ],
-  //   github: "https://github.com/Chimoha31/MERN-for-deploy.git",
-  //   app: "https://students-management-list.herokuapp.com/",
-  // },
+  {
+    id: 3,
+    image: hotel_booking,
+    title: "Hotel Booking Website",
+    description: "This is an application for booking a hotel. Admin: test@test.com for email, 111111 for password.",
+    technology: ["bootstrap", "react", "node.js", "express", "mongoDB", "firebase", "heroku"],
+    github: "https://github.com/Chimoha31/Ciccc_FinalProject",
+    app: "https://bookinghotel01.herokuapp.com/",
+  },
   // {
   //   id: 9,
   //   image: anime_database_app,

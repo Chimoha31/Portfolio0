@@ -17,9 +17,6 @@ const Title = () => {
           </li>
         </div>
       </div>
-      <div>
-        <hr />
-      </div>
     </>
   );
 };
