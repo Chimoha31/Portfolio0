@@ -1,0 +1,110 @@
+.works_container {
+  background-color: rgb(249, 214, 253);
+  width: 100%;
+  height: auto;
+  color: #333333;
+}
+
+.container_w {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+
+.container_w li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.container_w li.work_detail {
+  margin: 0 auto;
+}
+
+.container_w h1 {
+  color: #333333;
+  font-family: "Titan One", cursive;
+  font-size: 4rem;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.works_border {
+  border-bottom: 1px solid #333333;
+  width: 230px;
+  margin: 20px auto;
+}
+
+.container_w p {
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.btn_p p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 20px; 
+}
+
+.works_btn {
+  position:relative;
+  font-family: "Courier New", Courier, monospace;
+  color: #333333;
+  border: 1px solid #ccc;
+  padding: 10px 30px;
+  margin: 0 0 30px 0;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.works_btn:hover {
+  background: rgb(218, 129, 56);
+  color: rgb(245, 241, 241);
+  border-color: transparent;
+}
+
+.works_btn::before,
+.works_btn::after {
+  content: "";
+  position: absolute;
+  border: solid rgb(235, 31, 31);
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.works_btn::before {
+  top: -6px;
+  left: -6px;
+  border-width: 1px 0 0 1px;
+}
+
+.works_btn::after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 1px 1px 0;
+}
+
+.works_btn:hover::before,
+.works_btn:hover::after {
+  width: calc(100% + 11px);
+  height: calc(100% + 11px);
+  border-color: rgb(235, 31, 31);
+}
+
+@media (min-width: 767px) {
+  .container_w p {
+    width: 90%;
+  }
+}
+@media (min-width: 1025px) {
+
+}

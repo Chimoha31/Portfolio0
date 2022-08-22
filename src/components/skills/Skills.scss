@@ -1,0 +1,25 @@
+.skills_container ul {
+  padding-left: 0;
+  padding: 0 10px;
+  justify-content: space-around;
+}
+
+.skills_container ul li img {
+  width: 72px;
+  height: 72px;
+}
+.skills_container ul .vercel_icon {
+  width: 72px;
+  height: 35px;
+}
+
+@media (min-width: 767px) {
+  .skills_container ul li {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1025px) {
+  .skills_container ul li {
+    padding: 0 35px;
+  }
+}
