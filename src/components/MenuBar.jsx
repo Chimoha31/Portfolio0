@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import './MenuBar.scss';
 
 const MenuBar = () => {
@@ -16,17 +17,17 @@ const MenuBar = () => {
         <Offcanvas.Header closeButton></Offcanvas.Header>
         <Offcanvas.Body>
           <ul className="navbar-nav ml-auto mt-5">
-            <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }}>
-              <a className="nav-link" href="/">
+            <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }} onClick={handleClose}>
+              <Link className="nav-link" to="/">
                 <i className="fas fa-home mx-3"></i>
                 Home
-              </a>
+              </Link>
             </li>
-            <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }}>
-              <a href="/works" className="nav-link">
+            <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }} onClick={handleClose}>
+              <Link to="/all_projects" className="nav-link">
                 <i className="fab fa-react mx-3"></i>
                 Works
-              </a>
+              </Link>
             </li>
             <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }}>
               <a href="/contact" className="nav-link">
@@ -34,7 +35,7 @@ const MenuBar = () => {
                 Contact
               </a>
             </li>
-            <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }}>
+            <li className="nav-item active my-3" style={{ fontSize: "1.3rem" }} onClick={handleClose}>
               <a href="Resume.pdf" className="nav-link" download="Resume">
                 <i className="fas fa-download mx-3"></i>Resume
               </a>

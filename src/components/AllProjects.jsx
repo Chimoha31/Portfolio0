@@ -4,7 +4,7 @@ import './AllProjects.scss';
 
 const AllProjects = () => {
   return (
-    <div className="allprojects_container mt-5 mb-5">
+    <div className="allprojects_container mt-5">
       {allProjectsElements.map((project) => (
         <div className="projects_card" key={project.id}>
           <img src={project.image} className="card_pic" alt="card" />
