@@ -14,7 +14,7 @@ let allProjectsElements = [
     image: portfolio_chiho,
     title: "Portfolio",
     description: "This is my portfolio.",
-    technology: ["react", "jquery", "emailjs", "material-icons", "vercel"],
+    technology: ["react", "bootstrap", "emailjs", "vercel"],
     github: "https://github.com/Chimoha31/Portfolio.git",
     app: "https://portfolio-chiho.vercel.app/",
   },
