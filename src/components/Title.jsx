@@ -10,7 +10,7 @@ const Title = () => {
           <h1>Chiho Maekawa</h1>
           <p className="text-center">Front-End-Developer</p>
           <li>
-            <a href="Resume.pdf" download="Resume" className="contact_btn mt-2">
+            <a href="Resume.pdf" download="Resume" className="contact_btn mt-5›">
               <i className="fas fa-download"></i>
               Resume
             </a>
