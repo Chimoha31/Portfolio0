@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./Header.scss";
-import { InputLabel, Toolbar, Switch } from "@mui/material";
+// import { InputLabel, Toolbar, Switch } from "@mui/material";
 import ThemeContext from "../context/themeContext";
 
 const Header = ({ handleSwitch }) => {
@@ -24,11 +24,11 @@ const Header = ({ handleSwitch }) => {
               <i className="fas fa-download mx-3"></i>Resume
             </Nav.Link>
           </Nav>
-          <Toolbar style={{ display: "flex", justifyContent: "flex-end" }}>
+          {/* <Toolbar style={{ display: "flex", justifyContent: "flex-end" }}>
             <InputLabel style={theme.text}>dark</InputLabel>
             <Switch defaultChecked onClick={handleSwitch} />
             <InputLabel style={theme.text}>light</InputLabel>
-          </Toolbar>
+          </Toolbar> */}
         </Container>
       </Navbar>
     </div>

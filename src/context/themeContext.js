@@ -7,7 +7,7 @@ export const theme = {
       background: "#333",
     },
     body02: {
-      background: "#a393eb",
+      background: "#9b5d73",
     },
     button: {
       color: "#B0BEC5",
@@ -16,6 +16,12 @@ export const theme = {
     text: {
       color: "#ccc",
     },
+    icondark: {
+      color: "yellow",
+    },
+    iconlight: {
+      color: "#fff",
+    }
   },
   light: {
     body: {
@@ -27,6 +33,12 @@ export const theme = {
     },
     text: {
       color: "#333",
+    },
+    icondark: {
+      color: "black",
+    },
+    iconlight: {
+      color: "orange",
     }
   }
 }

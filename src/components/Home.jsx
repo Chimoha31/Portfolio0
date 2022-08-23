@@ -4,10 +4,10 @@ import Projects from "./Projects";
 import AboutMe from "./AboutMe";
 import Technologies from "./Technologies";
 
-const Home = () => {
+const Home = ({handleSwitch}) => {
   return (
     <Fragment>
-      <Title />
+      <Title handleSwitch={handleSwitch} />
       <Projects />
       <AboutMe />
       <Technologies />

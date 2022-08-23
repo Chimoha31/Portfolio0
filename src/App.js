@@ -26,7 +26,7 @@ const App = () => {
         <ThemeContext.Provider value={themeColor}>
           <Header handleSwitch={handleSwitch} />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home handleSwitch={handleSwitch} />} />
             <Route path="/all_projects" element={<AllProjects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

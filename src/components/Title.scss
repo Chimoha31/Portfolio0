@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:wght@500&display=swap");
 
 .introduce_container {
+  position: relative;
   font-family: "Acme", sans-serif;
   text-decoration: none;
   list-style: none;
   padding-top: 50px;
+  & .theme_color {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+  } 
   & .introduce {
     & h2 {
       font-size: 2.5rem;
