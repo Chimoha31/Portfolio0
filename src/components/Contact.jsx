@@ -1,10 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 import linkedin from "../gif/linkedin.gif";
 import github from "../gif/github.gif";
 import cellphone from "../gif/cellphone.gif";
 import gmail from "../gif/gmail.gif";
+import ThemeContext from "../context/themeContext";
+
 
 const {
   REACT_APP_MY_SERVICE_ID,
@@ -13,6 +15,7 @@ const {
 } = process.env;
 
 function Contact() {
+  const theme = useContext(ThemeContext);
   const form = useRef();
  
   const handleSubmit = (e) => {
@@ -36,8 +39,8 @@ function Contact() {
   };
 
   return (
-    <div className="contact_container">
-      <h1>Reach Me</h1>
+    <div className="contact_container" style={theme.body}>
+      <h1 style={theme.text}>Reach Me</h1>
       {/* form */}
       <div className="contact_form">
         <div className="form_container">
@@ -64,11 +67,11 @@ function Contact() {
         <ul>
           <li>
             <img src={cellphone} alt="cellphone gif" />
-            <p>+1(604)7852569</p>
+            <p style={theme.text}>+1(604)7852569</p>
           </li>
           <li>
             <img src={gmail} alt="gmail gif" />
-            <p>mokochii1108@gmail.com</p>
+            <p style={theme.text}>mokochii1108@gmail.com</p>
           </li>
         </ul>
       </div>
