@@ -9,10 +9,6 @@ export const theme = {
     body02: {
       background: "#9b5d73",
     },
-    button: {
-      color: "#B0BEC5",
-      background: "#263238",
-    },
     text: {
       color: "#ccc",
     },
@@ -26,10 +22,6 @@ export const theme = {
   light: {
     body: {
       background: "#fff",
-    },
-    button: {
-      color: "#333",
-      background: "#F9FBE7",
     },
     text: {
       color: "#333",

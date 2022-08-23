@@ -32,7 +32,7 @@ const Technologies = () => {
           <Skills />
         </li>
         <li className="btn_p">
-          <p>↓ See my projects from the below button ↓</p>
+          <p>↓ See All my projects from the below button ↓</p>
         </li>
         <li className="work_detail">
           <Link to="/all_projects" className="works_btn">
