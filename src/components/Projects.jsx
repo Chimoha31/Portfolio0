@@ -1,11 +1,12 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import { Card, Carousel, Container } from "react-bootstrap";
 import projectElements from "../projects/projectElements";
 import projectElements02 from "../projects/projectElements02";
 import projectElements03 from "../projects/projectElements03";
 import "./Projects.scss";
 import ThemeContext from "../context/themeContext";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
+
 
 const Projects = () => {
   const theme = useContext(ThemeContext);

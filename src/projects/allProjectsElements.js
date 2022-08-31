@@ -93,23 +93,23 @@ let allProjectsElements = [
     github: "https://github.com/Chimoha31/MERN-for-deploy.git",
     app: "https://students-management-list.herokuapp.com/",
   },
-  {
-    id: 9,
-    image: anime_database_app,
-    title: "Anime Database",
-    description:
-      "(Currently I'm working on it) This is an Anime Database application. You can see top, airing, upcoming, o.v.a anime in Japan. Also, you can search anime what you want to know the anime series. Moreover, you can put your favorite anime in your list.",
-    technology: [
-      "css",
-      "bootstrap",
-      "material ui",
-      "react",
-      "firebase",
-      "vercel",
-    ],
-    github: "https://github.com/Chimoha31/Anime_data.git",
-    app: "",
-  },
+  // {
+  //   id: 9,
+  //   image: anime_database_app,
+  //   title: "Anime Database",
+  //   description:
+  //     "(Currently I'm working on it) This is an Anime Database application. You can see top, airing, upcoming, o.v.a anime in Japan. Also, you can search anime what you want to know the anime series. Moreover, you can put your favorite anime in your list.",
+  //   technology: [
+  //     "css",
+  //     "bootstrap",
+  //     "material ui",
+  //     "react",
+  //     "firebase",
+  //     "vercel",
+  //   ],
+  //   github: "https://github.com/Chimoha31/Anime_data.git",
+  //   app: "",
+  // },
 ];
 
 export default allProjectsElements;

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import ThemeContext from '../context/themeContext';
+import ThemeContext from "../context/themeContext";
 import Skills from "./skills/Skills";
 import "./Technologies.scss";
 
 const Technologies = () => {
-  const theme = useContext(ThemeContext)
+  const theme = useContext(ThemeContext);
   return (
     <div className="works_container">
       {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
