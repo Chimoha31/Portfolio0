@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 import linkedin from "../gif/linkedin.gif";
@@ -14,9 +14,12 @@ const {
 } = process.env;
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
   const theme = useContext(ThemeContext);
   const form = useRef();
- 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -34,7 +37,12 @@ function Contact() {
           console.log(error.text);
         }
       );
+    setName("");
+    setEmail("");
+    setMsg("");
   };
+
+  console.log(name);
 
   return (
     <div className="contact_container" style={theme.body}>
@@ -44,11 +52,26 @@ function Contact() {
         <div className="form_container">
           <form ref={form} onSubmit={handleSubmit}>
             <label>Name</label>
-            <input type="text" name="user_name" autoFocus />
+            <input
+              type="text"
+              name="user_name"
+              autoFocus
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
             <label>Email</label>
-            <input type="email" name="user_email" />
+            <input
+              type="email"
+              name="user_email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <label>Message</label>
-            <textarea name="message" />
+            <textarea
+              name="message"
+              value={msg}
+              onChange={(e) => setMsg(e.target.value)}
+            />
             <input type="submit" value="Send" className="submit_btn" />
           </form>
         </div>
