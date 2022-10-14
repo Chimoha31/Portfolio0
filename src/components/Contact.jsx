@@ -7,7 +7,6 @@ import cellphone from "../gif/cellphone.gif";
 import gmail from "../gif/gmail.gif";
 import ThemeContext from "../context/themeContext";
 
-
 const {
   REACT_APP_MY_SERVICE_ID,
   REACT_APP_MY_TEMPLETE_ID,
@@ -20,7 +19,6 @@ function Contact() {
  
   const handleSubmit = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         `${REACT_APP_MY_SERVICE_ID}`,
