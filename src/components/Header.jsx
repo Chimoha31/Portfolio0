@@ -12,16 +12,16 @@ const Header = ({ handleSwitch }) => {
         <Container className="mx-3">
           <Nav className="me-auto">
             <Nav.Link href="/" style={theme.text}>
-              <i className="fas fa-home mx-3"></i>Home
+              <i className="fas fa-home mx-3" style={{color: "#dac292"}}></i>Home
             </Nav.Link>
             <Nav.Link href="/all_projects" style={theme.text}>
-              <i className="fab fa-react mx-1"></i>Works
+              <i className="fab fa-react mx-1" style={{color: "skyBlue"}}></i>Works
             </Nav.Link>
             <Nav.Link href="/contact" style={theme.text}>
-              <i className="fas fa-mail-bulk mx-3"></i>Contact
+              <i className="fas fa-mail-bulk mx-3" style={{color: "#f9ccac"}}></i>Contact
             </Nav.Link>
             <Nav.Link href="Resume.pdf" download="Resume" style={theme.text}>
-              <i className="fas fa-download mx-3"></i>Resume
+              <i className="fas fa-download mx-3" style={{color: "#96ceb4"}}></i>Resume
             </Nav.Link>
           </Nav>
           {/* <Toolbar style={{ display: "flex", justifyContent: "flex-end" }}>
