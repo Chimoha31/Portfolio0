@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useRef, useState, Fragment } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 import linkedin from "../gif/linkedin.gif";
@@ -26,13 +26,10 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name && email && msg) {
-      setSuccess("Succesfully sent");
       emailjs
         .sendForm(
           `${REACT_APP_MY_SERVICE_ID}`,
-
           `${REACT_APP_MY_TEMPLETE_ID}`,
-
           form.current,
           `${REACT_APP_MY_USER_ID}`
         )
@@ -55,77 +52,86 @@ function Contact() {
   console.log(errorMsg);
 
   return (
-    <div className="contact d-flex justify-content-center align-items-start mt-5">
-      <Form className="d-flex flex-column form" onSubmit={handleSubmit} ref={form}>
-        {/* Name */}
-        <Form.Group className="mb-3" controlId="formName">
-          <Form.Label>*Name</Form.Label>
-          <Form.Control
-            type="name"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </Form.Group>
-
-        {/* Email */}
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>*Email address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-
-        {/* Msg */}
-        <Form.Label>*Comments</Form.Label>
-        <FloatingLabel
-          controlId="floatingTextarea2"
-          label="Message"
-          className="mb-3"
+    <Fragment>
+      <div className="contact d-flex justify-content-center align-items-start mt-5">
+        <Form
+          className="d-flex flex-column form"
+          onSubmit={handleSubmit}
+          ref={form}
         >
-          <Form.Control
-            as="textarea"
-            placeholder="Leave a comment here"
-            className="messages"
-            style={{ height: "300px" }}
-            value={msg}
-            onChange={(e) => setMsg(e.target.value)}
-          />
-        </FloatingLabel>
+          {/* Name */}
+          <Form.Group className="mb-3" controlId="formName">
+            <Form.Label>*Name</Form.Label>
+            <Form.Control
+              type="name"
+              name="user_name"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </Form.Group>
 
-        {errorMsg && !success && (
-          <Alert
-            variant="danger"
-            className="mb-3 p-1 text-center msg"
-            style={{
-              fontFamily:
-                "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
-            }}
-          >
-            {errorMsg}
-          </Alert>
-        )}
-        {success && !errorMsg && (
-          <Alert
-            variant="success"
-            className="mb-3 p-1 msg"
-            style={{
-              fontFamily:
-                "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
-            }}
-          >
-            {success}
-          </Alert>
-        )}
+          {/* Email */}
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>*Email address</Form.Label>
+            <Form.Control
+              type="email"
+              name="user_email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-    </div>
+          {/* Msg */}
+          <Form.Label>*Comments</Form.Label>
+          <FloatingLabel
+            controlId="floatingTextarea2"
+            label="Message"
+            className="mb-3"
+          >
+            <Form.Control
+              as="textarea"
+              placeholder="Leave a comment here"
+              className="messages"
+              name="message"
+              style={{ height: "300px" }}
+              value={msg}
+              onChange={(e) => setMsg(e.target.value)}
+            />
+          </FloatingLabel>
+
+          {errorMsg && !success && (
+            <Alert
+              variant="danger"
+              className="mb-3 p-1 text-center msg"
+              style={{
+                fontFamily:
+                  "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
+              }}
+            >
+              {errorMsg}
+            </Alert>
+          )}
+          {success && !errorMsg && (
+            <Alert
+              variant="success"
+              className="mb-3 p-1 msg"
+              style={{
+                fontFamily:
+                  "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
+              }}
+            >
+              {success}
+            </Alert>
+          )}
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </div>
+    </Fragment>
   );
 }
 
