@@ -56,7 +56,7 @@ function Contact() {
 
   return (
     <div className="contact d-flex justify-content-center align-items-start mt-5">
-      <Form className="d-flex flex-column form" onSubmit={handleSubmit}>
+      <Form className="d-flex flex-column form" onSubmit={handleSubmit} ref={form}>
         {/* Name */}
         <Form.Group className="mb-3" controlId="formName">
           <Form.Label>*Name</Form.Label>
