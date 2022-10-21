@@ -5,7 +5,7 @@ import recipe_app from "../projectsImage/recipe_app.png";
 import qrcode_generator from "../projectsImage/qrcode_generator.png";
 import mern from "../projectsImage/mern.png";
 import rock_paper_scissors from "../projectsImage/rock_paper_scissors.png";
-import anime_database_app from "../projectsImage/anime_database_app.png";
+// import anime_database_app from "../projectsImage/anime_database_app.png";
 import portfolio_chiho from "../projectsImage/portfolio_chiho.png";
 
 let allProjectsElements = [

@@ -1,11 +1,11 @@
-import React, { useContext, useRef, useState, Fragment } from "react";
+import React, { useRef, useState, Fragment } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 import linkedin from "../gif/linkedin.gif";
 import github from "../gif/github.gif";
 import cellphone from "../gif/cellphone.gif";
 import gmail from "../gif/gmail.gif";
-import ThemeContext from "../context/themeContext";
+// import ThemeContext from "../context/themeContext";
 import { Alert, Button, FloatingLabel, Form } from "react-bootstrap";
 
 const {
@@ -20,12 +20,15 @@ function Contact() {
   const [msg, setMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const [success, setSuccess] = useState("");
-  const theme = useContext(ThemeContext);
+  // const theme = useContext(ThemeContext);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name && email && msg) {
+      setSuccess(
+        "Thank you for your message. I'll reply you back within 48 hours."
+      );
       emailjs
         .sendForm(
           `${REACT_APP_MY_SERVICE_ID}`,
@@ -49,11 +52,10 @@ function Contact() {
     setMsg("");
   };
 
-  console.log(errorMsg);
-
   return (
     <Fragment>
-      <div className="contact d-flex justify-content-center align-items-start mt-5">
+      <h1 className="text-center mt-5 reach_me">Reach Me</h1>
+      <div className="contact d-flex flex-column justify-content-center align-items-center mt-5">
         <Form
           className="d-flex flex-column form"
           onSubmit={handleSubmit}
@@ -130,6 +132,24 @@ function Contact() {
             Submit
           </Button>
         </Form>
+
+        {/* contact icon tools */}
+        <div className="d-flex flex-column justify-content-center align-items-center mt-5 mb-5 contact_icons">
+          <ul className="d-flex flex-column gap-3">
+            <li className="d-flex justify-content-center align-items-center gap-2">
+              <img src={linkedin} alt="linkedIn" />
+              <img src={github} alt="github" />
+            </li>
+            <li className="d-flex justify-content-center align-items-center gap-2">
+              <img src={cellphone} alt="phone" />
+              <p className="mb-0">606-785-2569</p>
+            </li>
+            <li className="d-flex justify-content-center align-items-center gap-2">
+              <img src={gmail} alt="gmail" />
+              <p className="mb-0">mokochii1108@gmail.com</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </Fragment>
   );
